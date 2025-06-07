@@ -8,7 +8,7 @@
 
 .container {
   width: 100%;
-  padding: 0 15px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 .container .row {
@@ -291,6 +291,12 @@
   }
 }
 /* Responsive Mixin */
+.test_area {
+  margin-top: 100px;
+}
+
 .test_area p {
   margin-bottom: 15px;
+  border: 1px solid lightgray;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
