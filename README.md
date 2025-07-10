@@ -1,4 +1,4 @@
-# grid_like_bootstrap_v2
+# grid_like_bootstrap_with_scss
 
 # live link
 

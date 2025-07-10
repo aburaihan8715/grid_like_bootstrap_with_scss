@@ -1,0 +1,124 @@
+/* =======================================
+common
+========================================== */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+[class*="col-"] {
+  width: 100%;
+  padding: 15px;
+}
+
+$grid_columns: 12;
+$grid_xxl_breakpoint: 1400px;
+$grid_xl_breakpoint: 1200px;
+$grid_lg_breakpoint: 992px;
+$grid_md_breakpoint: 768px;
+$grid_sm_breakpoint: 576px;
+
+// columns equal width all devices
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(100 / 12) * $i * 1%;
+  }
+}
+
+/* =================================================
+media for specific width and devices
+==================================================== */
+
+// Extra small devices (phones, 576px and down)
+// it is default so no need to define it
+// @media (max-width: $grid_sm_breakpoint) {
+//   .container {
+//     width: 100%;
+//   }
+//   .col {
+//     width: 100%;
+//   }
+// }
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (min-width: $grid_sm_breakpoint) {
+  .container {
+    max-width: 540px;
+    width: 100%;
+  }
+
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: calc(100 / 12) * $i * 1%;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: $grid_md_breakpoint) {
+  .container {
+    max-width: 740px;
+    width: 100%;
+  }
+
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: calc(100 / 12) * $i * 1%;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: $grid_lg_breakpoint) {
+  .container {
+    max-width: 960px;
+    width: 100%;
+  }
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: calc(100 / 12) * $i * 1%;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: $grid_xl_breakpoint) {
+  .container {
+    max-width: 1140px;
+    width: 100%;
+  }
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      width: calc(100 / 12) * $i * 1%;
+    }
+  }
+}
+
+/* Extra extra large devices (extra large laptops and desktops, 1400px and up) */
+@media (min-width: $grid_xxl_breakpoint) {
+  .container {
+    max-width: 1320px;
+    width: 100%;
+  }
+  @for $i from 1 through 12 {
+    .col-xxl-#{$i} {
+      width: calc(100 / 12) * $i * 1%;
+    }
+  }
+}
